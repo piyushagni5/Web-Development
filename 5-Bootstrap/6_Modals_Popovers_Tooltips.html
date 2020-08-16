@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+    
+  <head>
+      
+    <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+      
+  </head>
+    
+  <body>
+     
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="rob">
+  Email Rob
+</button>
+      
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="kirsten">
+  Email Kirsten
+</button>
+      
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" data-name="tommy">
+  Email Tommy
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+      <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?" data-placement="bottom">Click to toggle popover</button>
+      
+      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" id="myTooltip">
+  Tooltip on bottom
+</button>
+      
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"></script>
+      
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+      
+       
+      
+      <script type="text/javascript">
+      
+          $('#myModal').on('show.bs.modal', function (event) {
+              var button = $(event.relatedTarget) 
+              var recipient = button.data('name') 
+              var modal = $(this)
+              modal.find('.modal-title').text('New message to ' + recipient)
+        })
+          
+          $("#myModal").on("hidden.bs.modal", function (event) {
+              
+              alert("Modal closed!")
+              
+          })
+          
+          $('[data-toggle="popover"]').popover()
+          
+          $('[data-toggle="tooltip"]').tooltip()
+          
+          $("#myTooltip").on('shown.bs.tooltip', function() {
+              
+              alert("Tooltip displayed!")
+              
+          })
+      
+      </script>
+      
+  </body>
+    
+</html>
