@@ -1,0 +1,34 @@
+
+<!-- saved from url=(0067)http://www.completewebdevelopercourse.com/content/4-jquery/4.8.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        
+        <title>AJAX</title>
+ 
+        <script type="text/javascript" src="jquery.min.js"></script>
+        
+    </head>
+
+    <body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+        
+        <p>This is some content!</p>
+        
+        <script type="text/javascript">
+          
+            $.ajax("info.txt")
+                .done(function(data) {
+                
+                $("p").html(data);
+                
+                })
+                .fail(function() {
+                
+                alert("Could not get data");
+                
+                });
+            
+        
+        </script>
+        
+    
+
+</body></html>

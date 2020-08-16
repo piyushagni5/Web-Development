@@ -1,0 +1,72 @@
+
+
+<html>
+
+    <head>
+        
+        <title>jQuery</title>
+ 
+        <script type="text/javascript" src="jquery.min.js"></script>
+        
+        <style type="text/css">
+        
+            #circle {
+                
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+                
+            }
+            
+            .square {
+                
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                margin: 10px;
+                
+            }
+        
+        
+        </style>
+        
+    </head>
+
+    <body>
+        
+       <div id="circle"></div>
+        
+        <div class="square"></div>
+        
+        <div class="square"></div>
+        
+        
+        <script type="text/javascript">
+			
+			$("#circle").click(function() {
+                
+                alert("a circle was clicked!");
+                
+            });
+            
+            
+            /* 
+			selecting square class
+			$(".square").click
+			
+			selecting a div tag
+			$("div").click(function() {
+                
+                alert("a div was clicked!");
+                
+            });
+			*/ 
+            
+ 
+        </script>
+        
+    </body>
+
+</html>

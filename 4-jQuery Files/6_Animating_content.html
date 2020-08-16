@@ -1,0 +1,52 @@
+
+<!-- saved from url=(0067)http://www.completewebdevelopercourse.com/content/4-jquery/4.7.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        
+        <title>jQuery</title>
+ 
+        <script type="text/javascript" src="jquery.min.js"></script>
+        
+        <style type="text/css">
+        
+            #circle {
+                
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: green;
+                
+            }
+            
+        </style>
+        
+    </head>
+
+    <body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
+        
+        <div id="circle"></div>
+        
+        
+        <script type="text/javascript">
+            
+            $("#circle").click(function() {
+                
+                $(this).animate({
+                    width:"400px",
+                    height:"400px",
+                    marginLeft:"100px",
+                    marginTop:"100px"
+                }, 2000, function() {
+                    
+                    $(this).css("background-color", "red");
+                    
+                });
+                
+            });
+            
+            
+        
+        </script>
+        
+    
+
+</body></html>
